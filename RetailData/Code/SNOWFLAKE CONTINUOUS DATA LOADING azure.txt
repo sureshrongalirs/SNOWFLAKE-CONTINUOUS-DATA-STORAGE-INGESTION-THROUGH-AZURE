@@ -1,0 +1,40 @@
+Azure:
+
+Create Resource Group
+Create storage account
+create container
+create queue
+Register EventGrid, EventHub from Resouce provider from subscription
+create events from storage account
+Enter end point from the events  (Tracking will be displayed here)
+
+Now connect snowflake using integration:
+Copy the tenant ID from Active directory
+Copy the queue id from the queue (For storage notification queue)
+
+In snowflake:
+Create integration notification using tenant id and Queue Id
+copy the azure consent url by executing describe integration notification
+
+Open in new tab by using azure consent url and accept the permission
+
+Azure:
+copy snowflake/enterprise application name, Id and object id from enterprise application in azure dashboard
+Add role assignment from IAM in storage account
+choose storage queue data contributor for the role and snowflake enterprise application for member
+Copy the end points from storage account
+click all resources in shared access signature
+copy SAS url and SAS token from Generate connection string
+
+Snowflake:
+Create stages using end point, container blob name and SAS token
+Create fileformat
+create pipeline using integration function, stage and file format
+
+Azure:
+Add files in container
+
+Snowflake:
+Check data is added in snowflake using alter
+
+
